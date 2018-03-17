@@ -92,9 +92,13 @@
     \item Added methods to return variant data in expanded form, with one row per alternate allele.
   }
 }
-
 \section{Changes in version 1.15.3}{
   \itemize{
     \item alleleFrequency method accounts for sex when computing frequency for X and Y chromosomes.
+  }
+}
+\section{Changes in version 1.16.1}{
+  \itemize{
+    \item Bug fix in alleleFrequency method for SeqVarData where frequency calculation was done twice because the first calculation was not returned.
   }
 }
