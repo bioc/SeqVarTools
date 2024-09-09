@@ -37,7 +37,7 @@
     processing; see \code{\link{seqParallel}} for details.}
   \item{sort}{Logical for whether to sort alleles lexographically ("G/T"
     instead of "T/G").}
-  \item{sparse}{Logical for whether to return the alterate allele dosage as a sparse matrix using the \pkg{link{Matrix}} package. In most cases, setting \code{sparse=TRUE} will dramatically reduce the size of the returned object.}
+  \item{sparse}{Logical for whether to return the alterate allele dosage as a sparse matrix using the \pkg{\link{Matrix}} package. In most cases, setting \code{sparse=TRUE} will dramatically reduce the size of the returned object.}
   \item{n}{An integer, vector, or list indicating which allele(s) to return dosage
   for.  \code{n=0} is the reference allele, \code{n=1} is the first
   alternate allele, and so on.}
