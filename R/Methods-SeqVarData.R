@@ -19,8 +19,7 @@ SeqVarData <- function(gds, sampleData, variantData) {
     }
     gds@variantData <- variantData
     
-    #check <- validObject(gds, test=TRUE)
-    check <- .validObject(gds)
+    check <- validObject(gds, test=TRUE)
     if (is.character(check)) {
         if (closeOnFail) seqClose(gds)
         stop(check)
@@ -28,8 +27,8 @@ SeqVarData <- function(gds, sampleData, variantData) {
     gds
 }
 
-#setValidity("SeqVarData",
-.validObject <- function(object) {
+setValidity("SeqVarData",
+            function(object) {
                 if (ncol(sampleData(object)) > 0) {
                     if (!("sample.id" %in% varLabels(sampleData(object)))) {
                         return("sampleData does not have column sample.id")
@@ -49,7 +48,7 @@ SeqVarData <- function(gds, sampleData, variantData) {
                     }
                 }
                 TRUE
-            }#)
+            })
 
 setMethod("show",
           "SeqVarData",
